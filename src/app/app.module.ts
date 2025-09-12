@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule({ //DECORADORES
   declarations: [
-    AppComponent
+    AppComponent //se crea al crear el proyecto
   ],
   imports: [
     BrowserModule,
