@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+//resistencia.component.ts
+
+import { Component, OnInit } from '@angular/core';
+import { CalculadoraResistencia} from './operacionesresistencia';
 
 @Component({
   selector: 'app-resistencia',
@@ -6,6 +9,15 @@ import { Component } from '@angular/core';
   templateUrl: './resistencia.component.html',
   styleUrl: './resistencia.component.css'
 })
-export class ResistenciaComponent {
-  
+export class ResistenciaComponent{
+  public calculadora: CalculadoraResistencia = new CalculadoraResistencia();
+
+  public valores = this.calculadora.getValores();
+  public multiplicadores = this.calculadora.getMultiplicadores();
+  public tolerancias = this.calculadora.getTolerancias();
+
+  /* public calcuValor(): void {
+    this.calculadora.calcularResistencia();
+  } */
+
 }

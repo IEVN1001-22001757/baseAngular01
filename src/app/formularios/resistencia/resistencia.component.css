@@ -1,0 +1,28 @@
+/* Café */
+.bg-cafe {
+  background-color: #6f4e37; /* tono marrón */
+  color: white;
+}
+
+/* Morado */
+.bg-morado {
+  background-color: #800080; /* púrpura */
+  color: white;
+}
+
+/* Plata */
+.bg-plata {
+  background-color: #c0c0c0; /* gris plata */
+  color: black;
+}
+
+/* Dorado */
+.bg-dorado {
+  background-color: #d4af37; /* dorado */
+  color: black;
+}
+
+.bg-naranja {
+  background-color: #d46937; 
+  color: black;
+}
