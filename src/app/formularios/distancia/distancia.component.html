@@ -1,0 +1,52 @@
+<div class="col-md-12 items-center justify-center">
+  <div>
+    <h1 class="font-bold text-center ">
+      Calculadora de Distancia
+    </h1>
+
+    <div class="col-md-12 text-center">
+      <div>
+        <h2>Ingresa Coordenadas:</h2>
+
+        <!-- (x1, y1) -->
+        <div class="flex items-center">
+          <label >Punto 1</label>
+          <input type="number" name="x1" 
+                 [(ngModel)]="calculadora.x1" placeholder="X1" (ngModelChange)="calculadora.resultadoDistancia = null">
+          <input type="number" name="y1" 
+                 [(ngModel)]="calculadora.y1" 
+                 placeholder="Y1" (ngModelChange)="calculadora.resultadoDistancia = null">
+        </div>
+
+        <!-- P2(x2, y2) -->
+        <div class="flex items-center">
+          <label class="font-medium">Punto 2</label>
+          <input type="number" name="x2" 
+                 [(ngModel)]="calculadora.x2" placeholder="X2" (ngModelChange)="calculadora.resultadoDistancia = null">
+          <input type="number" name="y2" 
+                 [(ngModel)]="calculadora.y2" 
+                 placeholder="Y2" (ngModelChange)="calculadora.resultadoDistancia = null">
+        </div>
+
+        <hr>
+        <!-- Cálculo -->
+        <button (click)="calculadora.calcularDistancia()">
+            CALCULAR DISTANCIA
+        </button>
+      </div>
+
+      <!-- Columna de Resultados -->
+      <div class="flex flex-col justify-center items-center">
+        <h3 class="text-lg font-semibold text-indigo-800 mb-4 border-b border-indigo-300 pb-2 w-full text-center">
+          Resultado de Distancia
+        </h3>
+        
+        <div *ngIf="calculadora.resultadoDistancia !== null" class="text-center">
+          <p>
+            {{ calculadora.resultadoDistancia}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
