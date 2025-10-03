@@ -13,7 +13,7 @@ export class Distancia{
     public calcularDistancia():void{
         const resX = parseInt(this.x2)-parseInt(this.x1);
         const resY = parseInt(this.y2) - parseInt(this.y1);
-        const distanciaCuadrado = Math.pow(resX, 2) + Math.pow(resY, 2);
+        const distanciaCuadrado = (resX*resX) + (resY*resY);
         this.resultadoDistancia = Math.sqrt(distanciaCuadrado);
     }
 }
